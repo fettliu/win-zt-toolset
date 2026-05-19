@@ -1,0 +1,41 @@
+# Build outputs
+build/
+libzt-build/
+
+# .NET build artifacts (prevent file locking issues)
+**/obj/
+**/bin/
+*.nupkg
+*.nuspec
+
+# Compiled binaries
+*.exe
+*.o
+*.a
+*.dll
+*.lib
+*.pdb
+
+# ZeroTier data directory (contains private keys)
+zt-data/
+
+# Temporary files
+*.tmp
+*.log
+*.txt~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.backup2
+*.fresh
