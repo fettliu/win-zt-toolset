@@ -96,12 +96,12 @@ if (-not (Test-Path "build/include")) {
 }
 
 # Copy static library
-$LIB_PATH = "$BUILD_DIR/lib/libzt-static.a"
+$LIB_PATH = "$BUILD_DIR/lib/libzt.a"
 if (Test-Path $LIB_PATH) {
     Copy-Item $LIB_PATH "build/libzt.a" -Force
-    Write-Host "[OK] Copied libzt.a" -ForegroundColor Green
+    Write-Host "[OK] Copied libzt.a ($( [math]::Round((Get-Item $LIB_PATH).Length/1MB, 2)) MB)" -ForegroundColor Green
 } else {
-    Write-Host "[ERROR] libzt-static.a not found at $LIB_PATH" -ForegroundColor Red
+    Write-Host "[ERROR] libzt.a not found at $LIB_PATH" -ForegroundColor Red
     exit 1
 }
 

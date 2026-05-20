@@ -22,7 +22,7 @@ Write-Host ""
 # Compile pylon.c with g++ (because libzt.a is C++)
 Write-Host "Step 1: Compiling pylon.c..." -ForegroundColor Yellow
 
-& $MINGW_GPP -o build/pylon.exe pylon.c `
+& $GPP -o build/pylon.exe pylon.c `
     -DADD_EXPORTS `
     -I./build/include `
     ./build/libzt.a `

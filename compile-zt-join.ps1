@@ -34,7 +34,7 @@ $LDFLAGS = @("-Wl,--defsym,__imp__snprintf=_snprintf", "-Lbuild", "-lzt",
              "-static-libgcc", "-static-libstdc++", "-lpthread",
              "-lws2_32", "-lwsock32", "-liphlpapi", "-lshlwapi")
 
-& $MINGW_GPP @CFLAGS @INCLUDES -o "build\zt-join.exe" "zt-join.c" @LDFLAGS
+& $GPP @CFLAGS @INCLUDES -o "build\zt-join.exe" "zt-join.c" @LDFLAGS
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""
